@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# استثناء الملفات والمجلدات الحقيقية
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# توجيه كل شيء إلى نقطة الدخول
+RewriteRule ^ index.php [L]
+</IfModule>
+
+Options -Indexes
+
+# حماية المجلدات الحساسة (تُستكمل عبر .htaccess داخل كل مجلد)

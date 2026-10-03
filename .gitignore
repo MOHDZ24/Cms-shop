@@ -1,0 +1,14 @@
+# إعدادات التثبيت (تُولَّد على السيرفر)
+config/config.php
+install/install.lock
+
+# رفع الملفات
+uploads/*
+!uploads/.gitkeep
+
+# نظام
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
